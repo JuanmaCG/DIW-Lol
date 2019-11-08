@@ -6,7 +6,8 @@ const vm = new Vue({
     mounted() {
         axios({
                 "method": "GET",
-                "url": "https://euw1.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5?api_key=RGAPI-8cc372a9-5eb4-410c-b76a-9251f234394a",
+                "url": "https://euw1.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5?api_key=RGAPI-5920c955-9c44-453c-973d-9d3fe81964af",
+
             })
             .then((res) => {
                 this.data = res.data.entries;
@@ -24,6 +25,7 @@ const vm = new Vue({
             .catch((error) => {
                 console.log(error)
             })
+
     }
 
 });
