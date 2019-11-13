@@ -20,22 +20,11 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                    
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./index.html">Ranking</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./ranking.html">Ranking</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Mi Usuario
-                                          </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">TFT</a>
-                            <a class="dropdown-item" href="#">Retail</a>
-
-                        </div>
-                    </li>
+                    
 
                 </ul>
                 <form class="form-inline my-2 my-lg-0" action="">
@@ -70,11 +59,12 @@
                             <h2>Campeones mas jugados</h2>
                         </div>
                     </div>
-                    {{champInfo[0].championId}}
+                    
+                   
                     <!-- bucle de campeones -->
-                    <div class="row text-md-left">
-                        <div class="col-md" v-for="champion in topFiveChamp">
-                            <p class="h5 mb-3"> {{champion.name}}</p>
+                    <div class="row text-md-left" v-for="champion in topFiveChamp">
+                        <div class="col-md" >
+                            <p class="h5 mb-3"> {{champion.id}} - {{champion.title}}</p>
                         </div>
                     </div>
                     <div class="row">
@@ -83,13 +73,10 @@
                         </div>
                     </div>
                     <!-- bucle ultimas 5 partidas -->
-                    <div class="row">
+                    <div class="row" v-for = "result in matchesResult">
                         <div class="col-md text-md-left">
-                            <p class="text-success">Victoria: Campeon1</p>
-                            <p class="text-success">Victoria: Campeon2</p>
-                            <p class="text-danger">Derrota: Campeon2</p>
-                            <p class="text-danger">Derrota: Campeon1</p>
-                            <p class="text-danger">Derrota: Campeon3</p>
+                            <p class="text-success">{{result}}</p>
+                            
                         </div>
                     </div>
                    
